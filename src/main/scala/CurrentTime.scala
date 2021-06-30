@@ -4,7 +4,7 @@ import io.circe._
 import io.circe.generic.semiauto._
 
 case class CurrentTime(
-  time: Long
+    time: Long
 )
 
 object CurrentTime {
