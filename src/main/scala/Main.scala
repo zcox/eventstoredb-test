@@ -17,6 +17,7 @@ object Main extends App {
   val decoder = FromResolvedEvent[CurrentTime]
 
   //append one event to stream
+  //https://developers.eventstore.com/clients/grpc/appending-events/
   val event = CurrentTime.now()
   client
     .appendToStream(
@@ -36,6 +37,7 @@ object Main extends App {
   }
 
   //read all events from stream
+  //https://developers.eventstore.com/clients/grpc/reading-events/
   val events =
     Try(client.readStream(currentTimeStream, ReadStreamOptions.get().forwards().fromStart()).get())
       .map(_.getEvents().asScala)
