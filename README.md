@@ -6,4 +6,4 @@ docker compose up -d
 sbt run
 ```
 
-The EventStoreDB is available at http://localhost:2113.
+The EventStoreDB Admin UI is available at http://localhost:2113.
